@@ -1,0 +1,26 @@
+﻿asgiref==3.8.1
+certifi==2025.1.31
+cffi==1.17.1
+charset-normalizer==3.4.1
+cryptography==44.0.0
+Django==5.1.6
+django-allauth==65.4.1
+django-cors-headers==4.7.0
+django-extensions==3.2.3
+django-filter==24.3
+django-geojson==4.1.0
+djangorestframework==3.15.2
+djangorestframework-gis==1.1
+djangorestframework_simplejwt==5.4.0
+GDAL @ file:///C:/Users/Furqan%20Maqbool/Documents/Fiver/BackendForToppgrapher/backend/GDAL-3.10.1-cp312-cp312-win_amd64.whl#sha256=c2bcb20fca05b668aff5bf38b6f108db08c8daa50cff075c1eb9668f3f363b36
+idna==3.10
+pillow==11.1.0
+psycopg2==2.9.10
+psycopg2-binary==2.9.10
+pycparser==2.22
+PyJWT==2.10.1
+requests==2.32.3
+setuptools==75.8.0
+sqlparse==0.5.3
+tzdata==2025.1
+urllib3==2.3.0
