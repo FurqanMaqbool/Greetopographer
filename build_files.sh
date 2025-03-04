@@ -6,7 +6,7 @@
 #!/bin/bash
 
 # Install GDAL from GitHub
-pip3 install --no-cache-dir --find-links=https://raw.githubusercontent.com/FurqanMaqbool/Greetopographer/main/ gdal.whl
+pip3 install --no-cache-dir --find-links=https://raw.githubusercontent.com/FurqanMaqbool/Greetopographer/main/ GDAL-3.10.1-cp312-cp312-win_amd64.whl
 
 # Install other dependencies
 pip3 install -r requirements.txt
