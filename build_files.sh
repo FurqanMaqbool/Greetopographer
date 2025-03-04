@@ -5,7 +5,7 @@
 #!/bin/bash
 
 # Install dependencies
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 # Run migrations (if needed)
 python3 manage.py migrate
