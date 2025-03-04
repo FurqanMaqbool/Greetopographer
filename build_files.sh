@@ -2,9 +2,13 @@
 # python3 manage.py collectstatic
 
 
+
 #!/bin/bash
 
-# Install dependencies
+# Install GDAL from GitHub
+pip3 install --no-cache-dir --find-links=https://raw.githubusercontent.com/FurqanMaqbool/Greetopographer/main/ gdal.whl
+
+# Install other dependencies
 pip3 install -r requirements.txt
 
 # Run migrations (if needed)
