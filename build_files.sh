@@ -12,7 +12,7 @@ pip3.12 install --no-cache-dir --find-links=https://raw.githubusercontent.com/Fu
 pip3.12 install -r requirements.txt
 
 # Run migrations (if needed)
-python3 manage.py migrate
+python3.12 manage.py migrate
 
 # Collect static files
 python3.12 manage.py collectstatic --noinput
