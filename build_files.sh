@@ -4,7 +4,7 @@
 #!/bin/bash
 
 # Install GDAL from GitHub
-pip3.12 install --no-cache-dir --find-links=https://raw.githubusercontent.com/FurqanMaqbool/Greetopographer/main/ GDAL-3.10.1-cp312-cp312-win_amd64.whl
+# pip3.12 install --no-cache-dir --find-links=https://raw.githubusercontent.com/FurqanMaqbool/Greetopographer/main/ GDAL-3.10.1-cp312-cp312-win_amd64.whl
 
 # Install other dependencies
 pip3.12 install -r requirements.txt
