@@ -3,8 +3,8 @@
 
 #!/bin/bash
 
-# Install GDAL from GitHub
-# pip3.12 install --no-cache-dir --find-links=https://raw.githubusercontent.com/FurqanMaqbool/Greetopographer/main/ GDAL-3.10.1-cp312-cp312-win_amd64.whl
+# Install GDAL from PyPI
+pip3 install --no-cache-dir GDAL==3.10.1
 
 # Install other dependencies
 pip3.12 install -r requirments.txt
