@@ -18,26 +18,54 @@
 
 
 
+# #!/bin/bash
+
+# # Update package lists
+# apt-get update && apt-get install -y gdal-bin libgdal-dev libgeos-dev
+
+# # Export GDAL & GEOS library paths
+# export GDAL_LIBRARY_PATH=$(gdal-config --prefix)/lib/libgdal.so
+# export GEOS_LIBRARY_PATH=$(geos-config --prefix)/lib/libgeos_c.so
+
+# # Ensure environment variables are set for Django
+# echo "export GDAL_LIBRARY_PATH=$GDAL_LIBRARY_PATH" >> ~/.bashrc
+# echo "export GEOS_LIBRARY_PATH=$GEOS_LIBRARY_PATH" >> ~/.bashrc
+
+# # Install Python dependencies
+# pip3 install --no-cache-dir GDAL==$(gdal-config --version)
+# pip3 install -r requirements.txt
+
+# # Apply Django migrations
+# python3 manage.py migrate
+
+# # Collect static files
+# python3 manage.py collectstatic --noinput
+
+
+
+
+
 #!/bin/bash
 
-# Update package lists
+# Install system dependencies
 apt-get update && apt-get install -y gdal-bin libgdal-dev libgeos-dev
 
-# Export GDAL & GEOS library paths
-export GDAL_LIBRARY_PATH=$(gdal-config --prefix)/lib/libgdal.so
-export GEOS_LIBRARY_PATH=$(geos-config --prefix)/lib/libgeos_c.so
+# Set environment variables for GDAL & GEOS
+export GDAL_LIBRARY_PATH=$(ls /usr/lib/libgdal.so.* | head -n 1)
+export GEOS_LIBRARY_PATH=$(ls /usr/lib/libgeos_c.so.* | head -n 1)
 
-# Ensure environment variables are set for Django
-echo "export GDAL_LIBRARY_PATH=$GDAL_LIBRARY_PATH" >> ~/.bashrc
-echo "export GEOS_LIBRARY_PATH=$GEOS_LIBRARY_PATH" >> ~/.bashrc
+# Ensure Django picks them up
+echo "export GDAL_LIBRARY_PATH=$GDAL_LIBRARY_PATH" >> /etc/environment
+echo "export GEOS_LIBRARY_PATH=$GEOS_LIBRARY_PATH" >> /etc/environment
 
 # Install Python dependencies
 pip3 install --no-cache-dir GDAL==$(gdal-config --version)
 pip3 install -r requirements.txt
 
-# Apply Django migrations
-python3 manage.py migrate
+# Run migrations
+python3 manage.py migrate --noinput
 
 # Collect static files
 python3 manage.py collectstatic --noinput
+
 
