@@ -14,6 +14,7 @@ djangorestframework-gis==1.1
 djangorestframework_simplejwt==5.4.0
 gunicorn
 whitenoise
+GDAL==3.10.1
 idna==3.10
 pillow==11.1.0
 psycopg2-binary==2.9.10
