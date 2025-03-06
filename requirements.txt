@@ -1,3 +1,5 @@
+# Install GDAL from GitHub
+https://raw.githubusercontent.com/FurqanMaqbool/Greetopographer/master/GDAL-3.10.1-cp312-cp312-win_amd64.whl
 asgiref==3.8.1
 certifi==2025.1.31
 cffi==1.17.1
@@ -14,7 +16,6 @@ djangorestframework-gis==1.1
 djangorestframework_simplejwt==5.4.0
 gunicorn
 whitenoise
-GDAL==3.10.1
 idna==3.10
 pillow==11.1.0
 psycopg2-binary==2.9.10
